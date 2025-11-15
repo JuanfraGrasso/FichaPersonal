@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Ficha Personal</title>
+	<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+	<header class="hero">
+		<div class="container hero_header">
+			<h1 class="hero_title">Ficha personal</h1>
+			<button id="themeToggle" class="theme-toggle" type="button">
+				<span class="theme-toggle__icon" aria-hidden="true">🌙</span>
+			</button>
+		</div>
+	</header>
+
+	<section id="sobre-mi" class="about" aria-label="Información sobre mí">
+		<div class="container about_container">
+			<div class="about_avatar">
+				<img src="/images/1657166893002.jpg" alt="Foto de perfil de Juan Francisco Grasso Larivera" width="160"
+					height="160" />
+				<h2>Juan Francisco Grasso Larivera</h2>
+			</div>
+				<div class="projects about_projects">
+					<article>
+						<h3 class="about_title">Nombre completo</h3>
+						<p>Juan Francisco Grasso Larivera</p>
+					</article>
+					<article>
+						<h3 class="about_title">Nro Legajo</h3>
+						<p>1123151</p>
+					</article>
+					<article>
+						<h3 class="about_title">Materia</h3>
+						<p>Diseño y desarollo Web</p>
+					</article>
+					<article>
+						<h3 class="about_title">Curso</h3>
+						<p>536117</p>
+					</article>
+				</div>
+		</div>
+	</section>
+
+	<main class="container">
+		<section class="projects" aria-label="Listado de proyectos">
+			<article class="project-card" data-category="clase">
+				<img class="project-card_image" src="/images/ChatGPT.png"
+					alt="Captura del proyecto Fan Page de Dr House" width="600" height="340" />
+				<h2>Fan page</h2>
+				<a class="project-link" href="https://github.com/JuanfraGrasso/clase5" target="_blank">Ver proyecto</a>
+			</article>
+
+			<article class="project-card" data-category="personal">
+				<img class="project-card_image" src="/images/cafe_urbano.png"
+					alt="Mockup del proyecto Local comercial" width="600" height="340" />
+				<h2>Local comercial</h2>
+				<a class="project-link" href="https://github.com/JuanfraGrasso/CafeUrbanoV2" target="_blank">Ver proyecto</a>
+			</article>
+
+			<article class="project-card" data-category="grupo">
+				<img class="project-card_image" src="images/logo_nuevo.png"
+					alt="Vista previa del proyecto Galeria comercial" width="600" height="340" />
+				<h2>Galeria comercial</h2>
+				<a class="project-link" href="https://github.com/JuanfraGrasso/TrabajaIntegradorDise-oWeb" target="_blank">Ver proyecto</a>
+			</article>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<div class="container footer_content">
+			<a class="footer_contact" href="mailto:jugrasso@uade.edu.ar">jugrasso@uade.edu.ar</a>
+		</div>
+	</footer>
+
+	<script src="app.js"></script>
+</body>
+
+</html>
