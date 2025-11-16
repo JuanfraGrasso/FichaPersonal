@@ -4,7 +4,6 @@
 	--accent-color: #0a7cff;
 	--accent-dark: #0554aa;
 	--text-color: #1f2933;
-	--muted-color: #56616f;
 	--border-color: rgba(0, 0, 0, 0.08);
 	--transition: 0.2s ease-in-out;
 	--hero-gradient: linear-gradient(135deg, #0a7cff 0%, #2196f3 35%, #63b3ff 100%);
@@ -35,7 +34,7 @@ a {
 }
 
 .hero {
-	background: linear-gradient(135deg, #0a7cff 0%, #2196f3 35%, #63b3ff 100%);
+	background: var(--hero-gradient);
 	color: #ffffff;
 	padding: 3rem 0 2.5rem 0;
 }
@@ -84,11 +83,6 @@ a {
 	padding: 0.5rem;
 }
 
-.hero {
-	background: var(--hero-gradient);
-	color: #ffffff;
-	padding: 3rem 0 2.5rem 0;
-}
 
 .hero_header {
 	display: flex;
@@ -161,12 +155,6 @@ body.dark-theme {
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;
-
-	.hero_header {
-		flex-direction: column;
-		align-items: flex-start;
-	}
-	font-size: 0.9rem;
 }
 
 .footer_contact {

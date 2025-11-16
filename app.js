@@ -1,10 +1,8 @@
-const STORAGE_KEY = 'theme-preference';
 const btn = document.getElementById('themeToggle');
-const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
 function getStoredPreference() {
     try {
-        return localStorage.getItem(STORAGE_KEY);
+        return localStorage.getItem('theme-preference');
     } catch (e) {
         return null;
     }
@@ -12,7 +10,7 @@ function getStoredPreference() {
 
 function storePreference(value) {
     try {
-        localStorage.setItem(STORAGE_KEY, value);
+        localStorage.setItem('theme-preference', value);
     } catch (e) {
         return null;
     }
@@ -22,8 +20,7 @@ function applyTheme(theme) {
     const isDark = theme === 'dark';
     document.body.classList.toggle('dark-theme', isDark);
     if (btn) {
-        const icon = btn.querySelector('.theme-toggle__icon');
-        const text = btn.querySelector('.theme-toggle__text');
+        const icon = btn.querySelector('.theme-toggle_icon');
         if (isDark) {
             if (icon) icon.textContent = '☀️';
         } else {
@@ -34,7 +31,7 @@ function applyTheme(theme) {
 
 function init() {
     const stored = getStoredPreference();
-    const initial = stored || (prefersDark ? 'dark' : 'light');
+    const initial = stored || 'light';
     applyTheme(initial);
     if (btn) {
         btn.addEventListener('click', () => {
